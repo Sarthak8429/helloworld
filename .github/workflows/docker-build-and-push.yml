@@ -16,7 +16,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t your-image-name:latest .
+          docker build -t your-image-name:latest -f /var/www/html/Dockerfile
           docker tag your-image-name:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com/your-repository-name:latest
 
       - name: Configure AWS credentials
