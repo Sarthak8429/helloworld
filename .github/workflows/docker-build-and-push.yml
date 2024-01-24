@@ -13,15 +13,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-<<<<<<< HEAD
-=======
       - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: Set up Docker
         uses: public.ecr.aws/g8m0x4d3/helloworld
->>>>>>> 73c199b (Update docker-build-and-push.yml)
-
+        
       - name: Build Docker image
         run: |
           DOCKER_BUILDKIT=0 docker build -t your-image-name:latest .
